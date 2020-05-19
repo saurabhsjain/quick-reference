@@ -3,3 +3,5 @@ I perform data cleaning and preprocessing in my work and personal projects. As a
 This repo contains helpful explanation from stackoverflow. 
 
 Users of all levels can use this handy repo.
+
+This repo is **in progress** and I update it whenever I can.
