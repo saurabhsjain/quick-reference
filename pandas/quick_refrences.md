@@ -10,6 +10,9 @@ pd.shape
 ```python
 pd.describe
 ```
+## Concatenate
+### Concatenate 'col1' and 'col2' (separated by a space)
+```combined_col = df.col1.str.cat(df.col2, sep = ' ')```
 
 ## Datatypes
 `int`, `float`: enables mathematical operations   
@@ -30,9 +33,9 @@ df['col'].dtype
 ### To change datatype:
 * int to float
 * float to int
-* object to datetime
+* object to datetime ```df['dt_col'] = pd.to_datetime(df.['dt_col'])```
 * object to category
-* object to float:       ```df['col'] = df['col'].astype('float')```
+* object to float       ```df['col'] = df['col'].astype('float')```
                            
 
 ## Drop
@@ -43,11 +46,13 @@ df['col'].dtype
 df.drop(['col_1', 'col_2'], axis='columns', inplace=True)
 ```
 ### Drop rows having missing data in the col column
-```python
-df.dropna(subset=['col'], inplace=True)
-```
+```df.dropna(subset=['col'], inplace=True)```
+
 ### Drop duplicates
 
+## Index
+### Set a column as the index of the df
+```df.set_index('ind_col', inplace = True)```
 
 ## Missing values
 
