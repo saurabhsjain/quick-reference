@@ -10,6 +10,10 @@ pd.shape
 ```python
 pd.describe
 ```
+## Columns
+### Convert column names to lower case and replace the space between words by '_'
+```df.columns = df.columns.str.lower().str.replace(' ', '_')```
+
 ## Concatenate
 ### Concatenate 'col1' and 'col2' (separated by a space)
 ```combined_col = df.col1.str.cat(df.col2, sep = ' ')```
@@ -34,9 +38,10 @@ df['col'].dtype
 * int to float
 * float to int
 * object to datetime ```df['dt_col'] = pd.to_datetime(df.['dt_col'])```
-* object to category
+* object to category ```df['dt_col'] = df['col'].astype('category')```
 * object to float       ```df['col'] = df['col'].astype('float')```
                            
+
 
 ## Drop
 
