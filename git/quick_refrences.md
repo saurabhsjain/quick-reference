@@ -6,6 +6,7 @@ Download and Install git from: https://git-scm.com/
 * **origin**: default name given to remote server name
 * **remote**: as in remote server such as github, gitlab, bitbucket
 * **master**: name of the main branch. It is the final and working branch. 
+* **commit**: commits are the snapshots or the checkpoints of the changes.
 * **push**: act of pushing changes
 * **pull**: act of pulling changes
 * **fetch**: getting a fresh view on all the things that happened in a remote repository wi**thout integrating changes in your files
@@ -14,8 +15,9 @@ Download and Install git from: https://git-scm.com/
 * **fork**: get a copy of the project for additing more features or for your own use -> make changes and then send a PR
 * **stash**: keeps your changes aside while you pull-in recent changes from remote
 * **checkout**: When you want to restore a historic version of a specific file.  Thereby, you can reset single files to earlier revisions - while keeping the rest of the project untouched
-* **HEAD** means (the reference to the) current commit in the currently check-out branch.
-
+* **HEAD** is a special pointer that tells git on which brach we are on. It points to a branch and not to a commit. 
+* **Working tree** is what we see in our filesystem. Adding, deleting and editing files happens in the working directory.
+* **Staging area (index)** Only the files in staging area are snapshotted for the next commit. `git add filename` will start tracking the file from working tree.
 ## Actual Scenarios
 
 A. Pushing a local directory to github: There are contents in the directory or its a empty directory
@@ -35,7 +37,7 @@ A. Pushing a local directory to github: There are contents in the directory or i
 ```git status``` will give you the current status of the changes in your directory. 
 There are 3 states of a file:
 * <font color= 'red'>red</font> (untracked files): a new file is added/ created or when the file has not been tracked for changes
-* <font color= 'green'>green</font>: It is being tracked
+* <font color= 'green'>green</font>: Staged and ready to be committed. 
 * <font color= 'red'>red</font> (modified): some changes have been done to the file(s) and has not been commited yet
 
 
