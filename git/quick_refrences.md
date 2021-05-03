@@ -97,7 +97,7 @@ Other frequently used commands:
 * How to recover (the file(s) needs to be added first) a accidently deleted file from local directory:
 ```git checkout filename``` 
 
-* How to I not discard my changes in the working directory(local) and pull in the latest changes from remote?
+* How to discard my changes in the working directory (local) and pull in the latest changes from remote?
 1. ```git stash```
 2. ```git pull```
 3. ```git stash pop```
